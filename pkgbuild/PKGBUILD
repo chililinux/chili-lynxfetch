@@ -1,7 +1,7 @@
 # Maintainer: Vilmar Catafesta <vcatafesta@gmail.com>
 
-pkgname=chili-pkgname
-pkgdesc="Package template for Chililinux"
+pkgname=chili-lynxfetch
+pkgdesc="Super fast, versatile, and customizable command-line fetcher."
 #depends=('')
 #makedepends=('')
 #optdepends=('')
@@ -23,22 +23,13 @@ elif [ -e "pkgbuild.install" ]; then
 	install=pkgbuild.install
 fi
 
-prepare() {
-	cd "${srcdir}/${pkgname}"
-	# Add any preparation steps here, if needed
-	# For example: patch -p1 < "${srcdir}/patch-file.patch"
-}
-
 build() {
 	cd "${srcdir}/${pkgname}"
-	# Add build steps here, if needed
-	# For example: make
-}
-
-check() {
-	cd "${srcdir}/${pkgname}"
-	# Add check/test steps here, if needed
-	# For example: make check
+	git clone https://gitlab.com/lynxfetch/lynxfetch
+	cd lynxfetch
+	cargo b -r -F linux
+	mkdir -p ${srcdir}/${pkgname}/usr/bin/
+	cp target/release/lynxfetch ${srcdir}/${pkgname}/usr/bin/
 }
 
 package() {
