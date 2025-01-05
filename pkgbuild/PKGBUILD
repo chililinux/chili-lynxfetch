@@ -23,14 +23,14 @@ elif [ -e "pkgbuild.install" ]; then
 	install=pkgbuild.install
 fi
 
-build() {
-	cd "${srcdir}/${pkgname}"
-	git clone https://gitlab.com/lynxfetch/lynxfetch
-	cd lynxfetch
-	cargo b -r -F linux
-	mkdir -p ${srcdir}/${pkgname}/usr/bin/
-	cp target/release/lynxfetch ${srcdir}/${pkgname}/usr/bin/
-}
+#build() {
+#	cd "${srcdir}/${pkgname}"
+#	git clone https://gitlab.com/lynxfetch/lynxfetch
+#	cd lynxfetch
+#	cargo b -r -F linux
+#	mkdir -p ${srcdir}/${pkgname}/usr/bin/
+#	cp target/release/lynxfetch ${srcdir}/${pkgname}/usr/bin/
+#}
 
 package() {
 	cd "${srcdir}/${pkgname}"

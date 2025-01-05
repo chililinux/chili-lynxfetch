@@ -1,3 +1,3 @@
-# chili-pkgbuild-template
+# chili-lynxfetch
 
-Template for Chili Linux packages
+Super fast, versatile, and customizable command-line fetcher.

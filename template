@@ -29,8 +29,8 @@
 #  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 #  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ##############################################################################
-# Template file for 'chili-pkgname'
-pkgname=chili-pkgname
+# Template file for 'chili-lynxfetch'
+pkgname=chili-lynxfetch
 version=1.0.0
 revision=1
 noarch=true
@@ -38,7 +38,7 @@ noarch=true
 #depends="gtk+3 gnome-bluetooth python3-setproctitle rfkill xapps"
 #hostmakedepends="gettext"
 hostmakedepends="git"
-short_desc="Chili PKGBUILD and template for VoidLinux"
+short_desc="Super fast, versatile, and customizable command-line fetcher."
 maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
 license="MIT"
 homepage="https://github.com/chililinux/${pkgname}"
