@@ -31,8 +31,8 @@
 ##############################################################################
 # Template file for 'chili-lynxfetch'
 pkgname=chili-lynxfetch
-version=1.0.0
-revision=1
+version=$(date +%Y%m%d)
+revision=$(date +%H%M)
 noarch=true
 #build_style=gnu-makefile
 #depends="gtk+3 gnome-bluetooth python3-setproctitle rfkill xapps"
@@ -53,6 +53,6 @@ do_fetch() {
 }
 
 do_install() {
-	vcopy etc /
+#	vcopy etc /
 	vcopy usr /
 }
